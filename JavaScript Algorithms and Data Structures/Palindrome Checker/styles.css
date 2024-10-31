@@ -1,0 +1,83 @@
+*, 
+::before, 
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0a23;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  width: 400px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20vh auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+#title {
+  color: white;
+  font-size: 40px;
+}
+
+#input-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 6px 6px #002ead;
+}
+
+#input-box label {
+  display: block;
+  margin: 20px 0;
+}
+
+#input-box-check {
+  margin: 20px 0;
+}
+
+#text-input {
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #5a01a7;
+}
+
+#text-input:focus {
+  outline: none;
+}
+
+#check-btn {
+  width: 90px;
+  height: 30px;
+  background-color: #5a01a7;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#result {
+  font-Size: 20px;
+  text-align: center;
+}
+
+#description {
+  background-color: #00471b;
+  color: white;
+  padding: 15px;
+}
+
+.box {
+  border-radius: 10px;
+  padding: 10px;
+}
