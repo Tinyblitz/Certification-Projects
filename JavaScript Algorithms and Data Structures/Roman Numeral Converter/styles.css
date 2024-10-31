@@ -1,0 +1,91 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #1b1b32;
+}
+
+main {
+  width: 500px;
+  margin: auto;
+  margin-top: 5em;
+  text-align: center;
+  color: white;
+}
+
+main h1, .box {
+  margin: 40px 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #3b3b4f;
+  border: 2px solid white;
+}
+
+#input-container {
+  height: 18em;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#input-container #number, #convert-btn {
+  width: 80%;
+  height: 60px;
+}
+
+#input-container label {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#number {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+#number:focus {
+  outline: 1.5px solid lightblue;
+}
+
+#convert-btn {
+  font-size: 22px;
+  background-color: #feb439;
+  border: 4px solid #feac32;
+}
+
+#convert-btn:hover {
+  opacity: 80%;
+}
+
+#convert-btn:active {
+  opacity: 60%;
+}
+
+#output {
+  height: 70px;
+  font-size: 26px;
+}
+
+.hidden {
+  display: none;
+}
+
+.invalid {
+  background-color: #ffadad;
+  color: #850000;
+  border: 3px solid #850000;
+}
