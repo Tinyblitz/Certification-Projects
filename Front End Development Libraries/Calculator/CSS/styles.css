@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c2c2d6;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+#calculator {
+  position: absolute;
+  left: calc(50% - 150px);
+  top: calc(50vh - 175px);
+  width: 300px;
+  height: 350px;
+  background-color: black;
+  padding: 5px;
+  color: white;
+}
+
+#output {
+  width: 100%;
+  height: 20%;
+  font-size: 1em;
+  font-family: "Orbitron", sans-serif;
+}
+#output #calculation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 33.33%;
+  font-size: 1em;
+  color: #FFA500;
+  overflow-x: hidden;
+}
+#output #display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 66.66%;
+  font-size: 1.5em;
+}
+
+#keypad {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
+}
+#keypad .btn {
+  height: 20%;
+  width: 25%;
+  border: 0.5px solid black;
+  color: #e2ffff;
+  font-size: 16px;
+}
+#keypad .btn:hover {
+  color: black;
+  border: 0.5px solid grey;
+}
+#keypad #clear {
+  background-color: #ac3939;
+}
+#keypad .oprtn {
+  background-color: #666666;
+}
+#keypad .num {
+  background-color: #4d4d4d;
+}
+#keypad #equals {
+  background-color: #004466;
+}
+#keypad .long {
+  width: calc(25% * 2);
+}
+#keypad .tall {
+  height: calc(20% * 2);
+}
+#keypad #zero, #keypad #decimal {
+  position: relative;
+  top: calc(20% * -1);
+}
+
+@media (max-width: 350px) {
+  #calculator {
+    left: calc(50% - 75px);
+    top: calc(50vh - 87.5px);
+    width: 150px;
+    height: 175px;
+    font-size: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
