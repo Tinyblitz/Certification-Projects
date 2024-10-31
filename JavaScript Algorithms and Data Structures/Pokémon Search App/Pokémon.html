@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pokemon Search App</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <h1>Pokémon Search App</h1>
+      <div id="app-container">
+        <form id="input-container">
+          <label for="search-input">Search for Pokémon Name or ID:</label>
+          <div>
+            <input id="search-input" name="search input" type="text" placeholder="Enter Name/ID..." required/>
+            <button id="search-button" type="submit">Search</button>
+          </div>
+        </form>
+        <div id="search-results">
+          <h3 id="identity"><span id="pokemon-name"></span> <span id="pokemon-id"></span></h3>
+          <p id="weight-height"><span id="weight"></span><span id="height"></span></p>
+          <div id="img-holder"></div>
+          <div id="types"></div>
+        </div>
+        <div id="table-wrapper">
+          <table id="stats">
+            <thead>
+              <tr>
+                <th class="cell">Base</th>
+                <th class="cell">Stats</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="stat-label cell">HP:</td>
+                <td id="hp" class="stat-value cell"></td>
+              </tr>
+              <tr>
+                <td class="stat-label cell">Attack:</td>
+                <td id="attack" class="stat-value cell"></td>
+              </tr>
+              <tr>
+                <td class="stat-label cell">Defense:</td>
+                <td id="defense" class="stat-value cell"></td>
+              </tr>
+              <tr>
+                <td class="stat-label cell">Sp. Attack:</td>
+                <td id="special-attack" class="stat-value cell"></td>
+              </tr>
+              <tr>
+                <td class="stat-label cell">Sp. Defense:</td>
+                <td id="special-defense" class="stat-value cell"></td>
+              </tr>
+              <tr>
+                <td class="stat-label cell">Speed:</td>
+                <td id="speed" class="stat-value cell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
