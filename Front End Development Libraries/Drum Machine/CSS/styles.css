@@ -1,0 +1,151 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #8d8d8d;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+#drum-machine {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  width: auto;
+  height: auto;
+  background-color: #b3b3b3;
+  border: 5px solid #ffa500;
+  padding: 20px;
+}
+
+/* Adjustments for Drum Pad dimensions */
+#drum-pads {
+  grid-column: 1/2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 300px;
+}
+#drum-pads .drum-pad {
+  width: calc((300px - 8px * (3 - 1)) / 3);
+  height: calc(calc((300px - 8px * (3 - 1)) / 3) * 4 / 5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+  background-color: #808080;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+#drum-pads .drum-pad:focus {
+  outline: none;
+}
+#drum-pads .active {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  transform: translateY(2px);
+}
+#drum-pads .lit {
+  background-color: #FFA500;
+}
+
+#control-area {
+  grid-column: 2/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  min-height: 220px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+#control-area .controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+#control-area .controller > * {
+  display: block;
+  width: 22%;
+  height: 45%;
+}
+#control-area #display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 20%;
+  background-color: #808080;
+  font-size: 1.2em;
+}
+#control-area #vol-ctrl {
+  width: 100%;
+  height: 6px;
+}
+#control-area .slider {
+  -webkit-appearance: none;
+  background: #424242;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0px 2.5px 2px rgb(0, 0, 0);
+}
+#control-area .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 25px;
+  background: #0000ff;
+  border: 2px solid black;
+  border-radius: 0%;
+  cursor: pointer;
+}
+#control-area .switch-btn {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid black;
+  cursor: pointer;
+}
+#control-area .switch-btn .switch-side {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+#control-area .switch-btn .active {
+  background-color: #0000ff;
+}
+#control-area .switch-btn:focus {
+  outline: none;
+}
+
+@media (max-width: 674px) {
+  #drum-machine {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  #drum-pads {
+    grid-row: 1/2;
+    grid-column: 1/1;
+  }
+  #control-area {
+    grid-row: 2/2;
+    grid-column: 1/1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
