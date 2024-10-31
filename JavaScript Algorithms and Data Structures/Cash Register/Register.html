@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cash Register Project</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
+  <body>
+    <main>
+      <h1 name="title" id="title">Cash Register Project</h1>
+      <div name="change-due"id="change-due"></div>
+      <div id="user-input">
+        <label for="cash">Enter cash from customer:</label>
+        <input name="cash-input" id="cash" type="number"/>
+        <button name="purchase-button" id="purchase-btn" type="button">Purchase</button>
+      </div>
+      <div name="register" id="register">
+        <div id="register-display">
+          <div id="register-head">
+            <p id="register-total">Total: $<span></span></p>
+          </div>
+          <div id="register-neck"></div>
+        </div>
+        
+        <div id="register-body">
+          <div id="squares">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div id="change-display" >
+            <ul style="list-style-type: none;">Change in drawer: 
+              <li class="change">Pennies: $<span></span></li>
+              <li class="change">Nickels: $<span></span></li>
+              <li class="change">Dimes: $<span></span></li>
+              <li class="change">Quarters: $<span></span></li>
+              <li class="change">Ones: $<span></span></li>
+              <li class="change">Fives: $<span></span></li>
+              <li class="change">Tens: $<span></span></li>
+              <li class="change">Twenties: $<span></span></li>
+              <li class="change">Hundreds: $<span></span></li>
+            </ul>
+          </div>
+        </div>
+        <div id="register-drawer">
+          <div id="drawer-handle"></div>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
