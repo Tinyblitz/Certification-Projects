@@ -1,0 +1,89 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #87b5b5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+main > * {
+  margin-top: 20px;
+}
+
+.label {
+  background-color: #4aa3a3;
+  border: 1px solid #1d2f2f;
+  border-bottom: 1px solid #2c4848;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px 10px;
+}
+.label .fa {
+  float: right;
+  cursor: pointer;
+}
+.label .fa:hover {
+  color: #57E2B1;
+}
+
+#editor-container {
+  width: 80%;
+  height: auto;
+  max-width: 500px;
+  min-width: 300px;
+}
+#editor-container textarea {
+  width: 100%;
+  background-color: #c0d8d8;
+  border: 1px solid #1d2f2f;
+  border-top: none;
+  padding: 10px;
+  resize: vertical;
+  min-height: 150px;
+}
+#editor-container textarea:focus {
+  outline: none;
+}
+
+#preview-container {
+  width: 90%;
+  height: auto;
+  max-width: 700px;
+  min-width: 350px;
+}
+#preview-container #preview {
+  width: 100%;
+  background-color: #c0d8d8;
+  border: 1px solid #1d2f2f;
+  border-top: none;
+  padding: 10px;
+  height: auto;
+  min-height: 150px;
+  overflow-y: auto;
+}
+
+.container > * {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+#preview img {
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+/*# sourceMappingURL=styles.css.map */
