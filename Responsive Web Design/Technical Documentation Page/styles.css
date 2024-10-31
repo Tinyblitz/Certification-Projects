@@ -1,0 +1,128 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  --navHeight: calc(20px + 1.8em + 20*4px + 3em - 6px);
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#navbar header {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 10px; 
+  text-align: center;
+}
+
+#navbar a {
+  position: relative;
+  display: block;
+  padding: 12px;
+  font-size: 1em;
+  border-top: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  background-color: lightblue;
+}
+
+#navbar a:active {
+  background-color: #d2f0ff;
+}
+
+#buffer {
+  width: 100%;
+  height: 0;
+  background-color: blue;
+}
+
+#content {
+  position: absolute;
+  left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+#content header {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#content article {
+  margin: 20px 0 20px;
+}
+
+#content p, #content ul, li, h4{
+  margin-top: 20px;
+}
+
+.code-section {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(128,128,128,10%);
+}
+
+li {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: var(--navHeight);
+    background-color: white;
+  }
+
+  #navbar a {
+    padding: 10px;
+  }
+
+  #links {
+    height: calc(var(--navHeight) - 1.8em - 20px);
+    border: 2px solid;
+    padding: 0;
+    border-color: rgba(0, 22, 22, 0.4);
+    overflow-y: auto;
+  }
+
+  #main-doc {
+    overflow: hidden;
+  }
+
+  #buffer {
+    height: var(--navHeight);
+  }
+
+  #content {
+    position: relative;
+    left: 0;
+    height: calc(100% - var(--navHeight) - 40px);
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 20px 0;
+    overflow: auto;
+  }
+}

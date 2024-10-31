@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Dream Job Survey</h1>
+    <p id="description"><i>Please fill out the following survey questions</i></p> 
+    <form id="survey-form" action="post">
+      <fieldset>
+        <label for="name" id="name-label">Name <input type="text" id="name" placeholder="Enter your name" required></label>
+        <label for="email" id="email-label">Email <input type="email" id="email" placeholder="Enter your Email" required></label>
+        <label for="number" id="number-label">Age (optional) <input type="number" id="number" min="13" max="80" placeholder="Age"></label>
+        <label for"dropdown">Which option best describes your dream career?
+          <select id="dropdown">
+            <option>Select One</option>
+            <option>Administration</option>
+            <option>Health Services</option>
+            <option>Information Technology</option>
+            <option>Government Services</option>
+            <option>Hospitality</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>College Status?</legend>
+        <label for="graduated-option" class="option"><input type="radio" class="inline" id="graduated-option" name="college" value="0" checked> Graduated</label>
+        <label for="attending-option" class="option"><input type="radio" class="inline" id="attending-option" name="college" value="1"> Currently Attending</label>
+        <label for="didn't-go-option" class="option"><input type="radio" class="inline" id="didn't-go-option" name="college" value="2"> Did Not Attend</label>
+      </fieldset>
+      <fieldset>
+        <legend>Workplace Preference?</legend>
+        <label for="remote" class="option"><input type="checkbox" class="inline" id="remote" value="0"> Remote</label>
+        <label for="onsite" class="option"><input type="checkbox" class="inline" id="onsite" value="1"> On-site</label>
+        <label for="hybrid" class="option"><input type="checkbox" class="inline" id="hybrid" value="2"> Hybrid</label>
+      </fieldset>
+      <fieldset>
+        <label for="comments">Additional Comments
+          <textarea id="comments" placeholder="Enter your comments here..." maxlength="1000"></textarea><p id="charMax">1,000 characters max</p>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit">
+    </form>
+  </body>
+</html>

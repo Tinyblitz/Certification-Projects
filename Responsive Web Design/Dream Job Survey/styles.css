@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'tahoma', san-serif;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  min-width: 500px;
+  margin: auto;
+}
+
+#title {
+  font-size: 40px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#description {
+  text-align: center;
+}
+
+form, input, select {
+  border: none;
+  border-radius: 2%;
+}
+
+form {
+  background-color: rgb(10,110,110);
+  max-width: 800px;
+  padding: 0.1em 2em 2em;
+  margin: auto;
+  margin-bottom: 1.5em;
+}
+
+legend {
+  font-size: 30px;
+}
+
+fieldset:not(:last-of-type) {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0 0 1.5em;
+  margin: 1em 0 0 0;
+}
+
+fieldset:last-of-type {
+  border: none;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+label:not(.option) {
+  margin: 2em 0;
+}
+
+.option:first-of-type {
+  margin: 1em 0 0;
+}
+
+input,select,textarea {
+  width: 100%;
+  padding: 0.3em 0.8em;
+  margin-top: 0.5em;
+}
+
+.inline {
+  width:unset;
+  margin: 0;
+}
+
+textarea {
+  height: 100px;
+}
+
+#charMax {
+  font-size: 12px;
+  opacity: 60%;
+  text-align: right;
+}
+
+#submit {
+  background-color: lightgreen;
+  height: 50px;
+  font-size: 20px;
+  color: grey;
+}
+
+#submit:hover {
+  background-color: lightblue;
+  color: white;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>Looping Behavior</header>
+        <div id="links">
+          <a class="nav-link" href="#Introduction">Introduction</a>
+          <a class="nav-link" href="#For_Loops">For Loops</a>
+          <a class="nav-link" href="#While_Loops">While Loops</a>
+          <a class="nav-link" href="#Recursion">Recursion</a>
+          <a class="nav-link" href="#Breadth-First_Search">Breadth-First Search</a>
+          <a class="nav-link" href="#Depth-First_Search">Depth-First Search</a>
+        </div>
+      </nav>
+      <div id="buffer"></div>
+      <div id="content">
+        <section id="Introduction" class="main-section">
+          <header>Introduction</header>
+          <article>
+            <p>Loops are handy, if you want to run the same code over and over again, each time with a different value. There are many ways to achieve a loop state.  There are known algorithms developed to make more specific looping behavior to fit certain needs and goals.</p>
+          </article>
+        </section>
+        <section id="For_Loops" class="main-section">
+          <header>For Loops</header>
+          <article>
+            <p>A for loop is a control flow statement for specifying iteration. Specifically, a for-loop functions by running a section of code repeatedly until a certain condition has been satisfied.</p>
+            <p>For-loops have two parts: a header and a body. The header defines the iteration and the body is the code that is executed once per iteration. The header often declares an explicit loop counter or loop variable. This allows the body to know which iteration is being executed. For-loops are typically used when the number of iterations is known before entering the loop. For-loops can be thought of as shorthands for while-loops which increment and test a loop variable.</p>
+            <div class="code-section">
+              <code>
+                let numbers = [1,3,5,7];
+                <br><br>
+                for (let i = 0; i < cars.length; i++)
+                  <br><br>
+                  &nbsp;&nbsp;text += numbers[i] + 2;
+              </code>
+            </div>
+            <p>The above code demonstrates a for loop that adds 2 to every value in the numbers array.  This uses 2 lines of code instead of the the 4 lines it would have taken to add 2 to each value individually.</p>
+            <h4>Benefits:</h4>
+            <ul> 
+              <li><b>Iteration Over a Range</b>: A for loop allows you to iterate over a specific range of values, making it useful for tasks that need to be repeated a set number of times.</li>
+              <li><b>Simplified Code</b>: Instead of writing the same code multiple times, a for loop can execute the same block of code repeatedly, reducing redundancy and keeping the code clean and manageable.</li>
+              <li><b>Index Control</b>: The loop gives you control over an index variable, which can be used to track the position in a data set or to perform operations based on the current iteration.</li>
+              <li><b>Efficient Processing</b>: When working with large data sets, such as arrays or lists, a for loop provides an efficient way to access and process each element.</li>
+              <li><b>Customizable Step Size</b>: A for loop allows you to control the step size of the iteration, whether you want to increment by 1 or any other value, or even loop in reverse.</li>
+              <li><b>Multiple Conditions</b>: A for loop can include multiple conditions for initialization, incrementing, and termination, allowing for more complex logic.</li>
+            </ul>
+          </article>
+        </section>
+        <section id="While_Loops" class="main-section">
+          <header>While Loops</header>
+          <article>
+            <p>A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement.</p>
+            <p>The while construct consists of a block of code and a condition/expression. The condition/expression is evaluated, and if the condition/expression is true, the code within all of their following in the block is executed. This repeats until the condition/expression becomes false. Because the while loop checks the condition/expression before the block is executed, the control structure is often also known as a pre-test loop.</p>
+            <div class="code-section">
+              <code>
+                int x = 0;
+                <br><br>
+                while (x < 5)
+                  <br><br>
+                  &nbsp;&nbsp;x++;
+                  <br><br>
+                  &nbsp;&nbsp;print("Test Number: " + x);
+              </code>
+            </div>
+            <p>The above code demonstrates a while loop that increments a variable by 1 and prints out the current "test number" until the variable reachs a value of 5 or more. While loops allow you run commands repeatedly until a specified condition is met allowing for easy iterations.</p>
+            <h4>Benefits:</h4>
+            <ul> 
+              <li><b>Simplicity for Unknown Iterations</b>: It’s ideal when the number of iterations is unknown ahead of time. The loop will continue to run as long as the specified condition remains true.</li>
+              <li><b>Flexibility with Conditions</b>: You can base the continuation of the loop on any condition, allowing you to incorporate complex logical checks, making it versatile for a variety of tasks.</li>
+              <li><b>Efficiency</b>: If designed properly, a while loop can be very efficient in terms of memory and CPU usage, as it doesn’t require the overhead of iterating through fixed collections like for loops.</li>
+              <li><b>Real-Time Updates</b>: It allows for continuous checking of conditions that might change during execution, such as user input or dynamic data changes.</li>
+              <li><b>Input-Drive Loops</b>: Useful in cases where you want the loop to continue until a certain user input or event occurs, like waiting for user commands or network data.</li>
+              <li><b>Infinite Loops</b>: When an infinite loop is desired (with conditions to exit), a while loop provides a clear and structured way to maintain this flow.</li>
+            </ul>
+          </article>
+        </section>
+        <section id="Recursion" class="main-section">
+          <header>Recursion</header>
+          <article>
+            <p>Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem. Recursion solves such recursive problems by using functions that call themselves from within their own code. The approach can be applied to many types of problems, and recursion is one of the central ideas of computer science.</p>
+            <p>The power of recursion evidently lies in the possibility of defining an infinite set of objects by a finite statement. In the same manner, an infinite number of computations can be described by a finite recursive program, even if this program contains no explicit repetitions.</p>
+            <div class="code-section">
+              <code>
+                int fac1(int n)
+                  <br><br>
+                  &nbsp;&nbsp;if (n <= 0)
+                  <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return 1;
+                  <br><br>
+                  &nbsp;&nbsp;else
+                  <br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;return fac1(n-1)*n;
+              </code>
+            </div>
+            <p>The above code runs a factorial operation. The function calls itself while replacing the parameter with a new updated value then performs an operation to return the target value. If the parameter variable meets the base case, which in this case is n <= 0, then the recursion ends and returns each iteration call back up the chain resulting in the final total value of all the calls</p>
+            <h4>Benefits:</h4>
+            <ul>
+              <li><b>Simplifies Complex Problems</b>: Recursion can break down complex problems into smaller, more manageable subproblems. By solving the smaller problem first, it makes the overall solution more intuitive, especially for problems involving repetition or self-similar structures.</li>
+              <li><b>Natural Fit for Certain Problems</b>: Recursion is a natural solution for problems involving:
+                <ul>
+                  <li><b>Tree structures</b>: Traversing trees or graphs (e.g., Depth First Search (DFS)).</li>
+                  <li><b>Divide-and-conquer algorithms</b>: Problems like merge sort, quicksort, or binary search.</li>
+                  <li><b>Mathematical computations</b>: Fibonacci sequence, factorial, etc.</li>
+                </ul>
+              </li>
+              <li><b>Reduces Code Complexity</b>: Recursive solutions can reduce the need for complex looping structures, making code more readable and concise. For example, instead of manually writing nested loops, recursion provides a cleaner solution to problems like finding permutations or combinations.</li>
+              <li><b>Elegant Expression of Repetitive Tasks</b>: Recursion simplifies scenarios that would otherwise require multiple nested loops, especially when the number of iterations or levels of nesting is dynamic or unknown beforehand. This leads to a more elegant and less error-prone approach.</li>
+              <li><b>Memory Efficiency with Tail Recursion</b>: When implemented as <b>tail recursion</b>, recursive functions can be optimized by some compilers or interpreters to reuse stack frames, reducing the memory overhead that traditional recursion might incur. This allows recursion to perform as efficiently as iterative approaches in some cases.</li>
+              <li><b>Helps with Backtracking Algorithms</b>: Recursion is particularly useful in backtracking algorithms (e.g., solving puzzles like Sudoku or the N-Queens problem). It allows for clean solutions that explore one path at a time, easily handling scenarios where multiple possibilities need to be tried and discarded.</li>
+            </ul>
+          </article>
+        </section>
+        <section id="Breadth-First_Search" class="main-section">
+          <header>Breadth-First Search</header>
+          <article>
+            <p>Breadth-First Search (BFS) is a method used for traversing a graph. It starts at any item you want to use as a starting position in a graph, and explores all of the neighbor items at the present depth before to moving on to the items at the next depth level. A BFS is done on a tree (data structure) is called a level-order traversal.</p>
+            <p>Though they have usage in a variety of disciplines, BFS algorithms are most often associated with finding the shortest distance between two points, such as on a map.</p>
+            <div class="code-section">
+              <code>
+                void breadthFirstSearch(Item root)
+                  <br><br>
+                  &nbsp;&nbsp;Queue q = new Queue();
+                  <br><br>
+                  &nbsp;&nbsp;root.found = true;
+                  <br><br>
+                  &nbsp;&nbsp;q.enqueue(item);
+                  <br><br>
+                  &nbsp;&nbsp;while (!q.isEmpty())
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Item v = q.dequeue();
+                    <br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for (Item neighbor : v.neighbors())
+                      <br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!neighbor.found)
+                        <br><br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neighbor.found = true;
+                          <br><br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q.enqueue(neighbor);
+              </code>
+            </div>
+            <p>This code performs a Breadth-First Search (BFS) starting from a given root node. It uses a queue to explore all the nodes level by level. The algorithm begins by marking the root node as visited and adds it to the queue. While there are still nodes in the queue, it removes the first node, examines its neighbors, and checks if they have been visited. If a neighbor hasn't been visited, it marks it as visited and adds it to the queue to be explored later. This process continues until all nodes connected to the root have been visited, ensuring that nodes closer to the start are processed before distant ones.</p>
+            <h4>Benefits:</h4>
+            <ul>
+              <li><b>Finds Shortest Path in Unweighted Graphs</b>: BFS is guaranteed to find the shortest path (in terms of the number of edges) between the starting node and any other reachable node in an unweighted graph.</li>
+              <li><b>Explores All Nodes Level by Level</b>: BFS processes nodes in layers, exploring all nodes at a given level (distance from the start) before moving on to the next. This makes it useful in scenarios where all solutions at a given depth need to be evaluated before going deeper.</li>
+              <li><b>Useful for Searching in Connected Components</b>: BFS is ideal for finding all connected components of a graph. Starting from one node, it explores every node in its connected component before moving on to other components.</li>
+              <li><b>Applicable to Many Problem Domains</b>: BFS is widely used in various applications, such as finding the shortest path in maze-like problems, solving puzzles like the Rubik's Cube, and performing level-order traversal in trees.</li>
+              <li><b>Optimal for Shallow Solutions</b>: If the solution to a problem is close to the starting point, BFS will find it efficiently without exploring unnecessarily deep paths.</li>
+              <li><b>Can Be Used to Detect Cycles</b>: BFS can detect cycles in a graph by checking if a node is revisited during traversal. This makes it useful for identifying graph structures and understanding their properties.</li>
+              <li><b>Works for Both Directed and Undirected Graphs</b>: BFS can be applied to both directed and undirected graphs, making it versatile for various use cases involving network analysis and connectivity.</li>
+            </ul>
+          </article>
+        </section>
+        <section id="Depth-First_Search" class="main-section">
+          <header>Depth-First Search</header>
+          <article>
+            <p>Depth-First Search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. Extra memory, usually a stack, is needed to keep track of the nodes discovered so far along a specified branch which helps in backtracking of the graph.</p>
+            <p>For applications of DFS in relation to specific domains, such as searching for solutions in artificial intelligence or web-crawling, the graph to be traversed is often either too large to visit in its entirety or infinite (DFS may suffer from non-termination). In such cases, search is only performed to a limited depth; due to limited resources, such as memory or disk space, one typically does not use data structures to keep track of the set of all previously visited vertices. When search is performed to a limited depth, the time is still linear in terms of the number of expanded vertices and edges (although this number is not the same as the size of the entire graph because some vertices may be searched more than once and others not at all) but the space complexity of this variant of DFS is only proportional to the depth limit, and as a result, is much smaller than the space needed for searching to the same depth using breadth-first search. For such applications, DFS also lends itself much better to heuristic methods for choosing a likely-looking branch.</p>
+            <div class="code-section">
+              <code>
+                procedure DFS(G, v) is
+                <br><br>
+                  &nbsp&nbsplabel v as discovered
+                  <br><br>
+                  &nbsp&nbspfor all directed edges from v to w that are in G.adjacentEdges(v) do
+                  <br><br>
+                    &nbsp&nbsp&nbsp&nbspif vertex w is not labeled as discovered then
+                    <br><br>
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsprecursively call DFS(G, w)
+              </code>
+            </div>
+            <p>The given procedure outlines the Depth First Search (DFS) algorithm applied to a graph G, starting from a vertex v. The process begins by marking the starting vertex v as discovered to indicate that it has been visited. Then, the algorithm examines all the vertices w that are directly connected to v by an edge, which are stored in G.adjacentEdges(v). For each connected vertex w, the algorithm checks whether w has already been discovered. If it has not been discovered, the DFS algorithm is called recursively on w. This recursive call continues the depth-first exploration, diving deeper into the graph, visiting connected vertices and marking them as discovered. The algorithm proceeds this way, exploring as deep as possible into the graph before backtracking, ensuring that all reachable vertices from v are visited.</p>
+            <h4>Benefits:</h4>
+            <ul>
+              <li><b>Memory Efficiency</b>: DFS uses less memory than breadth-first search (BFS) because it doesn't need to store all the nodes at the current level in a queue. DFS only needs to store the path it is currently exploring.</li> 
+              <li><b>Path Discovery</b>: DFS is useful for finding a path between two nodes in large or infinite graphs, as it explores deeper into a graph before backtracking, potentially finding solutions faster in some cases.</li>
+              <li><b>Space Complexity</b>: DFS generally has a lower space complexity (O(h), where h is the height of the tree or depth of the graph) compared to BFS, which requires O(w) (the maximum width of the tree).</li>
+              <li><b>Backtracking Algorithms</b>: DFS is ideal for backtracking algorithms, as it naturally explores all possible paths and backtracks when it reaches dead ends or finds a solution. It’s commonly used in solving puzzles like mazes or Sudoku.</li>
+              <li><b>Cycle Detection</b>: DFS is useful for detecting cycles in a graph, especially in directed graphs. This makes it a key component in algorithms that check for cycle existence or topological sorting in directed acyclic graphs (DAGs).</li>
+              <li><b>Topological Sorting</b>: DFS is commonly used in topological sorting, which is used to order tasks or nodes in a directed graph where certain nodes depend on others being processed first.</li>
+              <li><b>Component Identification</b>: DFS is effective in identifying connected components in a graph, making it useful in applications like network analysis and image segmentation.</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
