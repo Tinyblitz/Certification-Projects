@@ -1,0 +1,140 @@
+:root {
+  --textColor: #0a0a23;
+  --phoneWidth: 280px;
+  --phoneHeight: calc(var(--phoneWidth) * 5 / 3);
+  --labelFontSize: 22px;
+  --inputFontSize: 18px;
+  --resultsFontSize: 24px;
+  --buttonFontSize: 20px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0px solid white;
+}
+
+body {
+  background-color: #3b3b4f;
+}
+
+main {
+  width: 100%;
+  min-width: 400px;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#phone-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: var(--phoneWidth);
+  height: var(--phoneHeight);
+  background-color: black;
+  border-radius: 18px;
+  margin: 30px auto;
+}
+
+#camera {
+  width: 12px;
+  height: 12px;
+  background-color: #dfdfe2;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 88%;
+  height: 80%;
+  background-color: #dfdfe2;
+  margin-top: 15px;
+  padding: 0px 8px 8px;
+}
+
+#screen * {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+}
+
+#screen label {
+  font-size: var(--labelFontSize);;
+}
+
+#user-input {
+  font-size: var(--inputFontSize);
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 10px 5px;
+}
+
+#results-div {
+  height: 100%;
+  color: #4d3800;
+  font-size: var(--resultsFontSize);
+  overflow-y: auto;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 88%;
+  margin-top: 8px;
+}
+
+.btn-styles {
+  cursor: pointer;
+  position: relative;
+  width: 38%;
+  height: 22px;
+  color: #0a0a23;
+  border-radius: 0px;
+  font-size: var(--buttonFontSize);
+  z-index: 1;
+}
+
+.btn-styles::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: inherit;
+  background: linear-gradient(210deg, white, #928d86);
+  z-index: -1;
+}
+
+.btn-styles:active::before {
+  background: linear-gradient(315deg, white, #928d86);
+}
+
+.btn-styles::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  background-image: linear-gradient(white, #928d86);
+  border-radius: inherit;
+  z-index: -1; 
+}
