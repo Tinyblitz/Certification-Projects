@@ -1,0 +1,133 @@
+:root {
+  font-size: 18px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-y: hidden;
+  background-color: #1e555c;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  color: white;
+}
+
+#clock > * {
+  margin-top: 20px;
+}
+
+#clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  padding: 26vh 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  font-size: 1.4em;
+}
+#settings .adjustments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+#settings .adjustments i {
+  cursor: pointer;
+}
+#settings .adjustments i:active {
+  opacity: 60%;
+}
+
+#clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 50%;
+}
+#clock-container #timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  min-height: 98px;
+  border: 5px solid #13353a;
+  border-radius: 20px;
+}
+#clock-container #timer-container label {
+  font-size: 1.5em;
+}
+#clock-container #timer-container p {
+  font-size: 3em;
+}
+#clock-container .low {
+  color: #a50d0d;
+}
+#clock-container #timer-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 12px;
+}
+#clock-container #timer-controls button {
+  font-size: 1.4em;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#clock-container #timer-controls button .on, #clock-container #timer-controls button #reset-btn:active {
+  color: #a3e635;
+}
+#clock-container #timer-controls button i {
+  margin-right: 12px;
+}
+#clock-container #timer-controls button:focus {
+  outline: none;
+}
+#clock-container #timer-controls button:hover {
+  opacity: 75%;
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 12px;
+  }
+  #clock {
+    width: 100%;
+    min-width: 200px;
+  }
+  #settings {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

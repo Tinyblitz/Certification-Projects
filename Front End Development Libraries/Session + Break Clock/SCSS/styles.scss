@@ -1,0 +1,147 @@
+:root {
+  font-size: 18px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-y: hidden;
+  background-color: #1e555c;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  color: white;
+}
+
+#clock > * {
+  margin-top: 20px;
+}
+
+#clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  padding: 26vh 0;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+#settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  font-size: 1.4em;
+  
+  .adjustments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;
+    
+    i {
+      cursor: pointer;
+    }
+    
+    i:active {
+      opacity: 60%;
+    }
+  }
+}
+
+#clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 50%;
+  
+  #timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    min-height: 98px;
+    border: 5px solid #13353a;
+    border-radius: 20px;
+    
+    label {
+      font-size: 1.5em;
+    }
+    
+    p {
+      font-size: 3em;
+    }
+  }
+  
+  .low {
+    color: #a50d0d;
+  }
+  
+  #timer-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 12px;
+    
+    button {
+      font-size: 1.4em;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      
+      .on, #reset-btn:active {
+        color: #a3e635;
+      }
+      
+      i {
+        margin-right: 12px;
+      }
+    }
+    
+    button:focus {
+      outline: none;
+    }
+    
+    button:hover {
+      opacity: 75%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 12px;
+  }
+  
+  #clock {
+    width: 100%;
+    min-width: 200px;
+  }
+  
+  #settings {
+    flex-direction: column;
+  }
+}
