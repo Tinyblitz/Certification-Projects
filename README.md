@@ -8,10 +8,10 @@ For the Front End Development Libraries certification, I utilized the code edito
 Please note that if you clone this repository, you will need to have the JavaScript Babel preprocessor installed to run the projects successfully.
 
 >>>Responsive Web Design --> https://www.freecodecamp.org/certification/DanielTsiu/responsive-web-design
-skills used: HTML/CSS
+>>skills used: HTML/CSS
 
 >>>JavaScript Algorithms and Data Structures --> https://www.freecodecamp.org/certification/DanielTsiu/javascript-algorithms-and-data-structures-v8
-skills used: HTML/CSS/JavaScript
+>>skills used: HTML/CSS/JavaScript
 
 >>>Front End Development Libraries --> https://freecodecamp.org/certification/DanielTsiu/front-end-development-libraries
-skills used: HTML/SCSS/JQuery/React/Redux/Bootstrap
+>>skills used: HTML/SCSS/JQuery/React/Redux/Bootstrap
