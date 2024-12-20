@@ -1,10 +1,8 @@
 const express = require('express')
-const app = express()
-const cors = require('cors')
+const app = express();
 require('dotenv').config()
 const mongoose = require('mongoose');
 
-app.use(cors())
 app.use(express.static('public'))
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html')
